@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+#wrapper {
+    
+    height: 100%;
+    width: 50vw;
+    padding: 50px;
+    background: url('https://wallpapers.com/images/high/hand-and-dog-paw-grayscale-q39522d5gfi0s4g0.jpg'), whitesmoke;
+    background-blend-mode: hard-light;
+    background-size: cover;
+}

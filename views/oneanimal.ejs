@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' href='stylesheet.css'>
+</head>
+<body>
+    <br>
+    <div class='container d-flex justify-content-center'>
+        <div id='wrapper' class="card shadow p-3 mb-5 bg-light rounded">
+            <h3>Animal Information</h3>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <form id='gohome' action='/' method='GET'>
+                <input type="submit" class="btn btn-primary" name="gohome" value="Go Home">
+            </form>
+            <form id='creatanimal' action='/animal/new' method='GET'>
+                <input type="submit" class="btn btn-success" name="createanimal" value="Create an animal">
+            </form>
+            <form id='editthisanimal' action='/animal/edit/<%=animal._id%>' method='GET'>
+                <input type="submit" class="btn btn-warning"name="editanimal" value="Edit this Animal">
+            </form>
+            <form id='destroythianimal' action='/animal/destroy/<%=animal._id%>' method='GET'>
+                <input type="submit" name="destroyanimal" class="btn btn-danger" value="Destroy this Animal record *">
+            </form>
+        
+        </div>
+        <br>
+        <h6> *You will delete it completely </h6>
+            <hr>
+            <br>
+            <h4>Animal Info</h4>
+            <hr>
+            <br>
+            <p><strong>Name: </strong><%= animal.name %></p>
+            <p><strong>Description: </strong> <%= animal.description %></p>
+            <p><strong>Type: </strong> <%= animal.type %></p>
+        </div>
+    </div>
+</body>
+</html>
